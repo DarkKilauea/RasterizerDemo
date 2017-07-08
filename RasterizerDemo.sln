@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasterizerDemo", "RasterizerDemo\RasterizerDemo.csproj", "{34A4E85C-1F76-4027-A3CF-22BF6F5C4BC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasterizerDemo.UI", "RasterizerDemo\RasterizerDemo.UI.csproj", "{34A4E85C-1F76-4027-A3CF-22BF6F5C4BC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
