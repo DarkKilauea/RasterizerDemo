@@ -72,5 +72,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RasterizerDemo.Engine\RasterizerDemo.Engine.csproj">
+      <Project>{39b51eeb-69fb-4952-aeb4-55297415a53f}</Project>
+      <Name>RasterizerDemo.Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

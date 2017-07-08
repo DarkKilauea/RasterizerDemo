@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.MainView = new System.Windows.Forms.PictureBox();
+            this.mainView = new System.Windows.Forms.PictureBox();
+            this.refreshTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MainView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainView)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -46,20 +48,26 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.MainView);
+            this.splitContainer1.Panel1.Controls.Add(this.mainView);
             this.splitContainer1.Size = new System.Drawing.Size(1008, 729);
             this.splitContainer1.SplitterDistance = 729;
             this.splitContainer1.TabIndex = 0;
             // 
-            // MainView
+            // mainView
             // 
-            this.MainView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainView.Location = new System.Drawing.Point(0, 0);
-            this.MainView.Margin = new System.Windows.Forms.Padding(0);
-            this.MainView.Name = "MainView";
-            this.MainView.Size = new System.Drawing.Size(729, 729);
-            this.MainView.TabIndex = 0;
-            this.MainView.TabStop = false;
+            this.mainView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainView.Location = new System.Drawing.Point(0, 0);
+            this.mainView.Margin = new System.Windows.Forms.Padding(0);
+            this.mainView.Name = "mainView";
+            this.mainView.Size = new System.Drawing.Size(729, 729);
+            this.mainView.TabIndex = 0;
+            this.mainView.TabStop = false;
+            // 
+            // refreshTimer
+            // 
+            this.refreshTimer.Enabled = true;
+            this.refreshTimer.Interval = 33;
+            this.refreshTimer.Tick += new System.EventHandler(this.RefreshTimer_Tick);
             // 
             // MainForm
             // 
@@ -72,7 +80,7 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MainView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -80,7 +88,8 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.PictureBox MainView;
+        private System.Windows.Forms.PictureBox mainView;
+        private System.Windows.Forms.Timer refreshTimer;
     }
 }
 
