@@ -71,6 +71,8 @@
 # "SDL.h", not <SDL/SDL.h>. This is done for portability reasons
 # because not all systems place things in SDL/ (see FreeBSD).
 
+include(FindPackageHandleStandardArgs)
+
 if(NOT SDL2_DIR)
   set(SDL2_DIR "" CACHE PATH "SDL2 directory")
 endif()
