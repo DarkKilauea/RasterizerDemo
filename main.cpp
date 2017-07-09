@@ -1,4 +1,5 @@
 #include "SDL.h" 
+#include "src/renderer.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,10 +14,12 @@ int main(int argc, char *argv[])
 		0
 	);
 
-	auto renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
-	SDL_SetRenderDrawColor(renderer, 128, 0, 0, SDL_ALPHA_OPAQUE);
-	SDL_RenderClear(renderer);
-	SDL_RenderPresent(renderer);
+	auto renderer = Renderer(window);
+	renderer.Begin();
+
+	// TODO: Invoke draw calls
+
+	renderer.End();
 
 	SDL_Delay(3000);
 
