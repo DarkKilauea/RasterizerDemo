@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Forms;
 
 namespace RasterizerDemo.UI
 {
@@ -11,9 +10,10 @@ namespace RasterizerDemo.UI
         [STAThread]
         private static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            using (var window = new Window())
+            {
+                window.Run(30.0);
+            }
         }
     }
 }

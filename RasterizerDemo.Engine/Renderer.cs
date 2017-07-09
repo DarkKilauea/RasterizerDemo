@@ -18,7 +18,7 @@ namespace RasterizerDemo.Engine
                     _frameBuffer.SetPixel(x, y, clearColor);
         }
 
-        public Image End()
+        public Bitmap End()
         {
             return _frameBuffer;
         }
