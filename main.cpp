@@ -1,4 +1,5 @@
-#include "SDL.h" 
+#include <mach/boolean.h>
+#include "SDL.h"
 #include "src/renderer.h"
 
 int main(int argc, char *argv[])
@@ -14,14 +15,29 @@ int main(int argc, char *argv[])
 		0
 	);
 
-	auto renderer = Renderer(window);
-	renderer.Begin();
+    bool running = true;
+    while (running)
+    {
+        SDL_Event event;
+        while (SDL_PollEvent(&event))
+        {
+            switch (event.type)
+            {
+                case SDL_QUIT:
+                    running = false;
+                    break;
+                default:
+                    break;
+            }
+        }
 
-	// TODO: Invoke draw calls
+        auto renderer = Renderer(window);
+        renderer.Begin();
 
-	renderer.End();
+        // TODO: Invoke draw calls
 
-	SDL_Delay(3000);
+        renderer.End();
+    }
 
 	SDL_DestroyWindow(window);
 	SDL_Quit();
